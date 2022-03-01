@@ -1,0 +1,57 @@
+﻿@page
+@model Sundaland.Pages.CartModel
+@{
+}
+
+<!-- Masthead -->
+<header class="masthead-cart">
+    <div class="container">
+        <div class="masthead-cart-heading">CART</div>
+        <div class="masthead-cart-subheading">Below you can find the books in your shopping cart</div>
+    </div>
+</header>
+
+<div class="row">
+    <div class="col m-5">
+
+        <!-- Continue Shopping Button -->
+        <div class="row mb-4">
+            <div class="col">
+                <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Book</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in Model.Basket.Items)
+                        {
+                            <tr>
+                                <td>@i.Book.Title</td>
+                                <td>@i.Quantity</td>
+                                <td>$@i.Book.Price.ToString("N")</td>
+                                <td>$@((i.Quantity * i.Book.Price).ToString("N"))</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total: </td>
+                            <td colspan="1">$@Model.Basket.CalculateTotal().ToString("N")</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
