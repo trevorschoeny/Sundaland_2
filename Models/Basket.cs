@@ -8,7 +8,7 @@ namespace Sundaland.Models
     {
         public List<BasketLineItem> Items { get; set; } = new List<BasketLineItem>();
 
-        public void AddItem(Book book, int qty)
+        public virtual void AddItem(Book book, int qty)
         {
             BasketLineItem lineItem = Items
                 .Where(b => b.Book.Title == book.Title)
@@ -27,6 +27,16 @@ namespace Sundaland.Models
                 Items.FirstOrDefault(b => b.Book.Title == book.Title).Quantity += qty;
                 //lineItem.Quantity += qty;
             }
+        }
+
+        public virtual void RemoveItem(Book book)
+        {
+            Items.RemoveAll(x => x.Book.BookId == book.BookId);
+        }
+
+        public virtual void ClearBasket()
+        {
+            Items.Clear();
         }
 
         public double CalculateTotal()

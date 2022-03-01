@@ -41,6 +41,13 @@
                                 <td>@i.Quantity</td>
                                 <td>$@i.Book.Price.ToString("N")</td>
                                 <td>$@((i.Quantity * i.Book.Price).ToString("N"))</td>
+                                <td class="text-center">
+                                    <form method="post" asp-page-handler="Remove">
+                                        <input type="hidden" name="bookID" value="@i.Book.BookId" />
+                                        <input type="hidden" name="returnURL" value="@Model.ReturnUrl" />
+                                        <button type="submit" class="btn btn-danger btn-small">Remove</button>
+                                    </form>
+                                </td>
                             </tr>
                         }
                     </tbody>
