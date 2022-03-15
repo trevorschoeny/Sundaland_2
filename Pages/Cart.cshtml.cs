@@ -12,34 +12,33 @@ namespace Sundaland.Pages
     public class CartModel : PageModel
     {
         private IBookstoreRepository repo { get; set; }
-
-        public CartModel (IBookstoreRepository temp)
-        {
-            repo = temp;
-        }
-
         public Basket Basket { get; set; }
         public string ReturnUrl { get; set; }
+
+        public CartModel (IBookstoreRepository temp, Basket b)
+        {
+            repo = temp;
+            Basket = b;
+        }
 
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
-            Basket = HttpContext.Session.GetJson<Basket>("Basket") ?? new Basket();
         }
 
         public IActionResult OnPost(int bookID, string returnUrl)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookID);
 
-            // Get session data
-            Basket = HttpContext.Session.GetJson<Basket>("Basket") ?? new Basket();
-
             // Add item to basket
             Basket.AddItem(b, 1);
 
-            // Put back session data
-            HttpContext.Session.SetJson("Basket", Basket);
+            return RedirectToPage(new { ReturnUrl = returnUrl });
+        }
 
+        public IActionResult OnPostRemove(int bookId, string returnUrl)
+        {
+            Basket.RemoveItem(Basket.Items.First(x => x.Book.BookId == bookId).Book);
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
     }

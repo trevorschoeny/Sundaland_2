@@ -14,10 +14,13 @@
 <div class="row">
     <div class="col m-5">
 
-        <!-- Continue Shopping Button -->
+        <!-- Buttons -->
         <div class="row mb-4">
-            <div class="col">
-                <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+            <div class="col-12">
+                <div class="text-center">
+                    <a class="btn btn-secondary" href="@Model.ReturnUrl">Continue Shopping</a>
+                    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Purchase">Checkout</a>
+                </div>
             </div>
         </div>
 
@@ -41,6 +44,13 @@
                                 <td>@i.Quantity</td>
                                 <td>$@i.Book.Price.ToString("N")</td>
                                 <td>$@((i.Quantity * i.Book.Price).ToString("N"))</td>
+                                <td class="text-center">
+                                    <form method="post" asp-page-handler="Remove">
+                                        <input type="hidden" name="bookID" value="@i.Book.BookId" />
+                                        <input type="hidden" name="returnURL" value="@Model.ReturnUrl" />
+                                        <button type="submit" class="btn btn-danger btn-small">Remove</button>
+                                    </form>
+                                </td>
                             </tr>
                         }
                     </tbody>
