@@ -80,3 +80,5 @@
 /Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/obj/Debug/netcoreapp3.1/Sundaland.dll
 /Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/obj/Debug/netcoreapp3.1/Sundaland.pdb
 /Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/obj/Debug/netcoreapp3.1/Sundaland.genruntimeconfig.cache
+/Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/obj/Debug/netcoreapp3.1/Razor/Pages/PurchaseCompleted.cshtml.g.cs
+/Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/Checkout.cshtml.g.cs

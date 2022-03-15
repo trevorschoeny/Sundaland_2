@@ -32,6 +32,7 @@ namespace Sundaland
                 options.UseSqlite(Configuration["ConnectionStrings:BookstoreDBConnection"]);
             });
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
+            services.AddScoped<IPurchaseRepository, EFPurchaseRepository>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
             services.AddSession();

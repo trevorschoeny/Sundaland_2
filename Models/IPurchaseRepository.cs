@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Linq;
+
 namespace Sundaland.Models
 {
-    public class IPurchaseRepository
+    public interface IPurchaseRepository
     {
-        public IPurchaseRepository()
-        {
-        }
+        IQueryable<Purchase> Purchases { get; }
+        void SavePurchase(Purchase purchase);
     }
 }

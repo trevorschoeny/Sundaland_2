@@ -14,10 +14,13 @@
 <div class="row">
     <div class="col m-5">
 
-        <!-- Continue Shopping Button -->
+        <!-- Buttons -->
         <div class="row mb-4">
-            <div class="col">
-                <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+            <div class="col-12">
+                <div class="text-center">
+                    <a class="btn btn-secondary" href="@Model.ReturnUrl">Continue Shopping</a>
+                    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Purchase">Checkout</a>
+                </div>
             </div>
         </div>
 

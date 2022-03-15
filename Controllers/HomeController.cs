@@ -18,7 +18,7 @@ namespace Sundaland.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Booklist");
         }
 
         public IActionResult Booklist(string category, int pageNum = 1)
