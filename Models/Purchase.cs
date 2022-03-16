@@ -28,5 +28,8 @@ namespace Sundaland.Models
         public string Zip { get; set; }
         [Required(ErrorMessage = "Please enter the country")]
         public string Country { get; set; }
+
+        [BindNever]
+        public bool PurchaseShipped { get; set; } = false;
     }
 }

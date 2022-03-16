@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "SdN5d5UJtLE/KL5Qurv0G5CcKVsTDzRF7hI5EPHJ+LLeoWb+vU4bBJaxHEYBlWgiqdL6sZRSgdq6FBegcuWw6g==",
+=======
+  "dgSpecHash": "8Q3hAoBhibH+aqTrcK1X94ysKsiV/NeAqJQNOD/q5EFT0CFqNhmbQsYzMJ/m8SKYnNHcr7ASbRH1DW1aRZpw1Q==",
+>>>>>>> master
   "success": true,
   "projectFilePath": "/Users/tschoeny/Documents/~BYU Winter 2022/413 - Enterprise Application Development/Sundaland/Sundaland/Sundaland.csproj",
   "expectedPackageFiles": [
