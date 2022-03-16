@@ -42,7 +42,9 @@ using Sundaland.Infrastructure;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7375a411e1e4b177813ac128744067526b45c1f9", @"/Views/Home/Booklist.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e654c6d857700c9bdc9744818d2f17b31cb22175", @"/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Views_Home_Booklist : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BookListViewModel>
+    #nullable disable
     {
         private global::Sundaland.wwwroot.Home.Views_Home_Booklist.__Generated__CategoriesViewComponentTagHelper __CategoriesViewComponentTagHelper;
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "BookDetails", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -90,7 +92,7 @@ using Sundaland.Infrastructure;
 
         <div class=""col-2 pt-4"">
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:categories", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7375a411e1e4b177813ac128744067526b45c1f96210", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:categories", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7375a411e1e4b177813ac128744067526b45c1f96254", async() => {
             }
             );
             __CategoriesViewComponentTagHelper = CreateTagHelper<global::Sundaland.wwwroot.Home.Views_Home_Booklist.__Generated__CategoriesViewComponentTagHelper>();
@@ -112,7 +114,7 @@ using Sundaland.Infrastructure;
 #line hidden
 #nullable disable
             WriteLiteral("                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7375a411e1e4b177813ac128744067526b45c1f97525", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7375a411e1e4b177813ac128744067526b45c1f97569", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -143,7 +145,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper.Model = b;
 #line hidden
 #nullable disable
             WriteLiteral("            </div>\n            <div class=\"row justify-content-center\">\n                <div class=\"col\">\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7375a411e1e4b177813ac128744067526b45c1f99501", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7375a411e1e4b177813ac128744067526b45c1f99545", async() => {
             }
             );
             __WaterProject_Infrastructure_PaginationTagHelper = CreateTagHelper<global::WaterProject.Infrastructure.PaginationTagHelper>();
@@ -183,16 +185,26 @@ __WaterProject_Infrastructure_PaginationTagHelper.PageClassEnabled = true;
             WriteLiteral("\n                </div>\n            </div>\n        </div>\n    </div>\n");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<BookListViewModel> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<BookListViewModel> Html { get; private set; } = default!;
+        #nullable disable
         [Microsoft.AspNetCore.Razor.TagHelpers.HtmlTargetElementAttribute("vc:categories")]
         public class __Generated__CategoriesViewComponentTagHelper : Microsoft.AspNetCore.Razor.TagHelpers.TagHelper
         {
@@ -206,9 +218,14 @@ __WaterProject_Infrastructure_PaginationTagHelper.PageClassEnabled = true;
             public override async global::System.Threading.Tasks.Task ProcessAsync(Microsoft.AspNetCore.Razor.TagHelpers.TagHelperContext __context, Microsoft.AspNetCore.Razor.TagHelpers.TagHelperOutput __output)
             {
                 (__helper as global::Microsoft.AspNetCore.Mvc.ViewFeatures.IViewContextAware)?.Contextualize(ViewContext);
-                var __helperContent = await __helper.InvokeAsync("Categories", new {  });
+                var __helperContent = await __helper.InvokeAsync("Categories", ProcessInvokeAsyncArgs(__context));
                 __output.TagName = null;
                 __output.Content.SetHtmlContent(__helperContent);
+            }
+            private Dictionary<string, object> ProcessInvokeAsyncArgs(Microsoft.AspNetCore.Razor.TagHelpers.TagHelperContext __context)
+            {
+                Dictionary<string, object> args = new Dictionary<string, object>();
+                return args;
             }
         }
     }

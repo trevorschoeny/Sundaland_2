@@ -38,6 +38,8 @@ namespace Sundaland
             services.AddSession();
             services.AddScoped<Basket>(x => SessionBasket.GetBasket(x));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
+            ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +77,9 @@ namespace Sundaland
                 endpoints.MapDefaultControllerRoute();
 
                 endpoints.MapRazorPages();
+
+                endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
             });
         }
     }
